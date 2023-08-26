@@ -6,6 +6,10 @@
     border-right: 1px solid black;
 }
 
+.navbar-nav{
+    border: 1px solid black;
+}
+
 .heroSection {
     font-family: 'ADLaM Display', cursive;
     padding-top: 50px;
@@ -132,15 +136,15 @@ a.anchor {
 
 .shining-effect {
     position: relative;
-    font-family: sans-serif;
+    font-family: 'ADLaM Display', cursive;
     text-transform: uppercase;
     font-size: 2em;
     letter-spacing: 4px;
     overflow: hidden;
-    background: linear-gradient(90deg, #000, #fff, #000);
+    background: linear-gradient(90deg, #fc894d, #f34079);
     background-repeat: no-repeat;
-    background-size: 80%;
-    animation: animate 5s linear infinite;
+    background-size: 90%;
+    animation: animate 6s linear infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
@@ -167,11 +171,11 @@ a.anchor {
 
 @keyframes animate {
     0% {
-        background-position: -500%;
+        background-position: -900%;
     }
 
     100% {
-        background-position: 500%;
+        background-position: 950%;
     }
 }
 
@@ -195,6 +199,10 @@ a.anchor {
         border-bottom: 1px solid black;
         padding-bottom: 15px;
     }
+
+    .navbar-nav{
+        border: 0px solid black;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -206,6 +214,15 @@ a.anchor {
     .nav-menu-first {
         border-right: 0px solid black;
         margin-left: 5px;
+    }
+
+    .nav-menu-last {
+        border-right: 0px solid black;
+        margin-left: 5px;
+    }
+
+    .navbar-nav{
+        border: 0px solid black;
     }
 }
 
