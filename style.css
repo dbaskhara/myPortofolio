@@ -12,22 +12,34 @@
 
 .heroSection {
     font-family: 'ADLaM Display', cursive;
-    padding-top: 50px;
     padding-bottom: 5%;
     margin-top: 5%;
     -webkit-text-fill-color: white;
     background-color: black;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-center {
+    font-size: 40px;
 }
 
 .aboutMeSection {
     text-align: center;
     font-family: 'ADLaM Display', cursive;
+    height: 750px;
 }
 
 .about-me-row {
     border: 3px solid black;
     margin: 30px !important;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
 }
 
 .about-me-left-box {
@@ -51,12 +63,22 @@
     font-family: 'ADLaM Display', cursive;
     margin-top: 5%;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 900px;
 }
 
 .educationSection {
     text-align: center;
     font-family: 'ADLaM Display', cursive;
     margin-top: 20px;
+    height: 800px;
+}
+
+.educationData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .col-gap {
