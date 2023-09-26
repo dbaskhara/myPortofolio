@@ -72,6 +72,7 @@
     text-align: center;
     font-family: 'ADLaM Display', cursive;
     margin-top: 20px;
+    margin-bottom: 250px;
     height: 800px;
 }
 
@@ -83,7 +84,6 @@
 
 .col-gap {
     padding-top: 65px;
-    margin-bottom: 5%;
 }
 
 .hr-style {
