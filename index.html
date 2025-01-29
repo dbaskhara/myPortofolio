@@ -35,16 +35,13 @@
             text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
 
         p {
             font-size: 1.1em;
             margin-bottom: 15px;
-        }
-
-        .highlight {
-            color: #00bcd4;
-            font-weight: bold;
+            animation: slideIn 1.5s ease-in-out;
         }
 
         a {
@@ -97,13 +94,38 @@
             50% { border-color: #00bcd4; }
         }
 
-        /* Hover Effects */
-        .hover-effect {
-            transition: transform 0.3s;
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .hover-effect:hover {
+        /* Slide-In Animation */
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* LinkedIn Button */
+        .linkedin-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0077b5;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .linkedin-btn:hover {
+            background-color: #005f8a;
             transform: scale(1.05);
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -114,16 +136,25 @@
     <div class="container">
         <h1 class="typing">Hello, I'm [Your Name]</h1>
         <p>
-            Welcome to my personal CV website! I am a <span class="highlight">Demitries Baskhara</span> with a passion for 
-            <span class="highlight">Developer</span>. I have experience in 
-            <span class="highlight">ERP</span> and a strong track record of 
-            <span class="highlight">AI</span>.
-        </p>        
-	<p>
-            Feel free to explore my website to learn more about my <a href="#experience" class="hover-effect">experience</a>, 
-            <a href="#skills" class="hover-effect">skills</a>, and <a href="#projects" class="hover-effect">projects</a>. If you'd like to get in touch, 
-            you can reach me at <a href="mailto:dbaskhara@gmail.com" class="hover-effect">dbaskhara@gmail.com</a>.
+            Welcome to my personal CV website! I am a passionate and driven IT professional with expertise in 
+            software development, data analysis, and system design. I thrive on solving complex problems and 
+            creating innovative solutions that make a difference.
         </p>
+        <p>
+            With a strong foundation in computer science and hands-on experience in various programming languages 
+            and frameworks, I am always eager to learn and adapt to new technologies. My goal is to contribute 
+            to impactful projects and collaborate with like-minded professionals.
+        </p>
+        <p>
+            Feel free to explore my website to learn more about my <a href="#experience">experience</a>, 
+            <a href="#skills">skills</a>, and <a href="#projects">projects</a>. If you'd like to get in touch, 
+            you can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a>.
+        </p>
+
+        <!-- LinkedIn Button -->
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="linkedin-btn">
+            Connect with me on LinkedIn
+        </a>
     </div>
 
     <script>
