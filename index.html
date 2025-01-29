@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV - Introduction</title>
+    <title>My CV - Catalog Theme</title>
     <style>
         /* Basic Reset */
         * {
@@ -21,7 +21,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
             background: #2e2e2e;
@@ -41,6 +41,7 @@
         p {
             font-size: 1.1em;
             margin-bottom: 15px;
+            text-align: center;
             animation: slideIn 1.5s ease-in-out;
         }
 
@@ -53,6 +54,55 @@
         a:hover {
             color: #0073e6;
             text-decoration: underline;
+        }
+
+        /* Catalog Grid Layout */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .catalog-item {
+            background: #3e3e3e;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .catalog-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .catalog-item h3 {
+            color: #00bcd4;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .catalog-item p {
+            font-size: 1em;
+            color: #ccc;
+        }
+
+        /* LinkedIn Button */
+        .linkedin-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0077b5;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .linkedin-btn:hover {
+            background-color: #005f8a;
+            transform: scale(1.05);
         }
 
         /* Dark/Light Mode Toggle */
@@ -73,59 +123,15 @@
             background: #005bb5;
         }
 
-        /* Typing Animation */
-        .typing {
-            display: inline-block;
-            overflow: hidden;
-            border-right: 2px solid #00bcd4;
-            white-space: nowrap;
-            margin: 0 auto;
-            letter-spacing: 2px;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #00bcd4; }
-        }
-
-        /* Fade-In Animation */
+        /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
 
-        /* Slide-In Animation */
         @keyframes slideIn {
             from { transform: translateX(-100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
-        }
-
-        /* LinkedIn Button */
-        .linkedin-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #0077b5;
-            color: #fff;
-            border-radius: 5px;
-            text-align: center;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .linkedin-btn:hover {
-            background-color: #005f8a;
-            transform: scale(1.05);
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -140,21 +146,33 @@
             software development, data analysis, and system design. I thrive on solving complex problems and 
             creating innovative solutions that make a difference.
         </p>
-        <p>
-            With a strong foundation in computer science and hands-on experience in various programming languages 
-            and frameworks, I am always eager to learn and adapt to new technologies. My goal is to contribute 
-            to impactful projects and collaborate with like-minded professionals.
-        </p>
-        <p>
-            Feel free to explore my website to learn more about my <a href="#experience">experience</a>, 
-            <a href="#skills">skills</a>, and <a href="#projects">projects</a>. If you'd like to get in touch, 
-            you can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a>.
-        </p>
+
+        <!-- Catalog Grid -->
+        <div class="catalog-grid">
+            <div class="catalog-item">
+                <h3>Skills</h3>
+                <p>Programming, Data Analysis, System Design, Cloud Computing, DevOps</p>
+            </div>
+            <div class="catalog-item">
+                <h3>Projects</h3>
+                <p>Web Development, Machine Learning, Mobile Apps, Open Source Contributions</p>
+            </div>
+            <div class="catalog-item">
+                <h3>Experience</h3>
+                <p>3+ years in Software Development, Internships at Top Tech Companies</p>
+            </div>
+            <div class="catalog-item">
+                <h3>Education</h3>
+                <p>Bachelor's in Computer Science, Certifications in Cloud and AI</p>
+            </div>
+        </div>
 
         <!-- LinkedIn Button -->
-        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="linkedin-btn">
-            Connect with me on LinkedIn
-        </a>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="linkedin-btn">
+                Connect with me on LinkedIn
+            </a>
+        </div>
     </div>
 
     <script>
@@ -175,6 +193,10 @@
             }
             .container.light-mode {
                 background: #fff;
+                color: #333;
+            }
+            .catalog-item.light-mode {
+                background: #f9f9f9;
                 color: #333;
             }
         `;
