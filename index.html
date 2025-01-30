@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV - Catalog Theme with Rain Effect</title>
+    <title>My CV - Rain Text Effect</title>
     <style>
         /* Basic Reset */
         * {
@@ -29,11 +29,11 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
             position: relative; /* Ensure content is above rain effect */
             z-index: 1;
+            text-align: center;
         }
 
         h1 {
             color: #0073e6;
-            text-align: center;
             font-size: 2.5em;
             margin-bottom: 20px;
             animation: fadeIn 2s ease-in-out;
@@ -42,7 +42,6 @@
         p {
             font-size: 1.1em;
             margin-bottom: 15px;
-            text-align: center;
         }
 
         a {
@@ -56,57 +55,8 @@
             text-decoration: underline;
         }
 
-        /* Catalog Grid Layout */
-        .catalog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .catalog-item {
-            background: rgba(62, 62, 62, 0.9); /* Semi-transparent background */
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .catalog-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-        }
-
-        .catalog-item h3 {
-            color: #00bcd4;
-            margin-bottom: 10px;
-            font-size: 1.5em;
-        }
-
-        .catalog-item p {
-            font-size: 1em;
-            color: #ccc;
-        }
-
-        /* LinkedIn Button */
-        .linkedin-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #0077b5;
-            color: #fff;
-            border-radius: 5px;
-            text-align: center;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .linkedin-btn:hover {
-            background-color: #005f8a;
-            transform: scale(1.05);
-        }
-
-        /* Rain Effect */
-        .rain {
+        /* Rain Text Effect */
+        .rain-text {
             position: absolute;
             top: 0;
             left: 0;
@@ -116,12 +66,11 @@
             z-index: 0; /* Ensure rain is behind content */
         }
 
-        .rain span {
+        .rain-text span {
             position: absolute;
             top: -50px;
-            width: 2px;
-            height: 50px;
-            background: linear-gradient(transparent, #00bcd4);
+            font-size: 1.2em;
+            color: #00bcd4;
             animation: rain 5s linear infinite;
         }
 
@@ -142,16 +91,18 @@
     </style>
 </head>
 <body>
-    <!-- Rain Effect -->
-    <div class="rain">
-        <!-- Generate multiple rain drops -->
+    <!-- Rain Text Effect -->
+    <div class="rain-text">
+        <!-- Generate random letters falling like rain -->
         <script>
+            const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
             for (let i = 0; i < 100; i++) {
                 const span = document.createElement('span');
+                span.textContent = characters[Math.floor(Math.random() * characters.length)];
                 span.style.left = `${Math.random() * 100}%`;
                 span.style.animationDuration = `${Math.random() * 2 + 3}s`;
                 span.style.animationDelay = `${Math.random() * 2}s`;
-                document.querySelector('.rain').appendChild(span);
+                document.querySelector('.rain-text').appendChild(span);
             }
         </script>
     </div>
@@ -164,26 +115,6 @@
             software development, data analysis, and system design. I thrive on solving complex problems and 
             creating innovative solutions that make a difference.
         </p>
-
-        <!-- Catalog Grid -->
-        <div class="catalog-grid">
-            <div class="catalog-item">
-                <h3>Skills</h3>
-                <p>Programming, Data Analysis, System Design, Cloud Computing, DevOps</p>
-            </div>
-            <div class="catalog-item">
-                <h3>Projects</h3>
-                <p>Web Development, Machine Learning, Mobile Apps, Open Source Contributions</p>
-            </div>
-            <div class="catalog-item">
-                <h3>Experience</h3>
-                <p>3+ years in Software Development, Internships at Top Tech Companies</p>
-            </div>
-            <div class="catalog-item">
-                <h3>Education</h3>
-                <p>Bachelor's in Computer Science, Certifications in Cloud and AI</p>
-            </div>
-        </div>
 
         <!-- LinkedIn Button -->
         <div style="text-align: center; margin-top: 30px;">
