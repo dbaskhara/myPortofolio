@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV - Catalog Theme</title>
+    <title>My CV - Catalog Theme with Rain Effect</title>
     <style>
         /* Basic Reset */
         * {
@@ -17,17 +17,18 @@
             line-height: 1.6;
             background-color: #1e1e1e;
             color: #f4f4f4;
-            transition: background-color 0.3s, color 0.3s;
+            overflow: hidden; /* Hide overflow for rain effect */
         }
 
         .container {
             max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
-            background: #2e2e2e;
+            background: rgba(46, 46, 46, 0.8); /* Semi-transparent background */
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s;
+            position: relative; /* Ensure content is above rain effect */
+            z-index: 1;
         }
 
         h1 {
@@ -42,7 +43,6 @@
             font-size: 1.1em;
             margin-bottom: 15px;
             text-align: center;
-            animation: slideIn 1.5s ease-in-out;
         }
 
         a {
@@ -65,7 +65,7 @@
         }
 
         .catalog-item {
-            background: #3e3e3e;
+            background: rgba(62, 62, 62, 0.9); /* Semi-transparent background */
             padding: 20px;
             border-radius: 8px;
             text-align: center;
@@ -105,42 +105,60 @@
             transform: scale(1.05);
         }
 
-        /* Dark/Light Mode Toggle */
-        .mode-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #0073e6;
-            color: #fff;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
+        /* Rain Effect */
+        .rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0; /* Ensure rain is behind content */
         }
 
-        .mode-toggle:hover {
-            background: #005bb5;
+        .rain span {
+            position: absolute;
+            top: -50px;
+            width: 2px;
+            height: 50px;
+            background: linear-gradient(transparent, #00bcd4);
+            animation: rain 5s linear infinite;
         }
 
-        /* Animations */
+        @keyframes rain {
+            0% {
+                transform: translateY(-50px);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
+        /* Fade-In Animation */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
-        @keyframes slideIn {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
     </style>
 </head>
 <body>
-    <!-- Dark/Light Mode Toggle Button -->
-    <button class="mode-toggle" onclick="toggleMode()">Toggle Dark/Light Mode</button>
+    <!-- Rain Effect -->
+    <div class="rain">
+        <!-- Generate multiple rain drops -->
+        <script>
+            for (let i = 0; i < 100; i++) {
+                const span = document.createElement('span');
+                span.style.left = `${Math.random() * 100}%`;
+                span.style.animationDuration = `${Math.random() * 2 + 3}s`;
+                span.style.animationDelay = `${Math.random() * 2}s`;
+                document.querySelector('.rain').appendChild(span);
+            }
+        </script>
+    </div>
 
+    <!-- Main Content -->
     <div class="container">
-        <h1 class="typing">Hello, I'm [Your Name]</h1>
+        <h1>Hello, I'm [Your Name]</h1>
         <p>
             Welcome to my personal CV website! I am a passionate and driven IT professional with expertise in 
             software development, data analysis, and system design. I thrive on solving complex problems and 
@@ -174,33 +192,5 @@
             </a>
         </div>
     </div>
-
-    <script>
-        // Dark/Light Mode Toggle Function
-        function toggleMode() {
-            const body = document.body;
-            const container = document.querySelector('.container');
-            body.classList.toggle('light-mode');
-            container.classList.toggle('light-mode');
-        }
-
-        // Add light mode styles dynamically
-        const style = document.createElement('style');
-        style.innerHTML = `
-            body.light-mode {
-                background-color: #f4f4f4;
-                color: #333;
-            }
-            .container.light-mode {
-                background: #fff;
-                color: #333;
-            }
-            .catalog-item.light-mode {
-                background: #f9f9f9;
-                color: #333;
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
 </body>
 </html>
