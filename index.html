@@ -107,7 +107,8 @@
 
             paragraph.split('').forEach((char, index) => {
                 const span = document.createElement('span');
-                span.textContent = char;
+                // Replace spaces with non-breaking spaces
+                span.innerHTML = char === ' ' ? '&nbsp;' : char;
                 span.style.animationDelay = `${index * 0.05}s`; // Stagger the animation
                 paragraphContainer.appendChild(span);
             });
