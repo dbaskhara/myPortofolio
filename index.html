@@ -3,82 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flipbook Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.css">
+  <title>Your Name - IT Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <div id="flipbook">
-    <!-- Cover Page -->
-    <div class="page cover">
-      <h1>John Doe</h1>
-      <p>Creative Professional | Portfolio</p>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>Your Name</h1>
+      <p>IT Professional | Developer | Tech Enthusiast</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- About Me Page -->
-    <div class="page">
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
       <h2>About Me</h2>
-      <p>
-        Hello! I'm John Doe, a passionate creative professional with expertise in design, development, and storytelling. I specialize in creating visually stunning and user-friendly experiences.
-      </p>
-      <p>
-        With over 5 years of experience, I've worked with clients across various industries to bring their ideas to life. Let's create something amazing together!
-      </p>
+      <div class="about-content">
+        <img src="assets/images/profile.jpg" alt="Your Name" class="profile-img">
+        <p>
+          Hi, I'm [Your Name], an IT professional with a passion for [specific interests, e.g., software development, cybersecurity, cloud computing]. 
+          I have [X years] of experience in [specific field], and I love solving complex problems using technology. 
+          Let's build something amazing together!
+        </p>
+      </div>
     </div>
+  </section>
 
-    <!-- Skills Page -->
-    <div class="page">
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
       <h2>Skills</h2>
-      <ul>
-        <li>Web Design & Development</li>
-        <li>Graphic Design</li>
-        <li>UI/UX Design</li>
-        <li>Branding & Identity</li>
-        <li>Content Creation</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill">
+          <i class="fas fa-code"></i>
+          <h3>Web Development</h3>
+          <p>HTML, CSS, JavaScript, React, Node.js</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Cybersecurity</h3>
+          <p>Network Security, Penetration Testing, Firewalls</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-cloud"></i>
+          <h3>Cloud Computing</h3>
+          <p>AWS, Azure, Google Cloud</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-database"></i>
+          <h3>Database Management</h3>
+          <p>MySQL, MongoDB, PostgreSQL</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Experience Page -->
-    <div class="page">
-      <h2>Experience</h2>
-      <h3>Senior Designer - ABC Agency</h3>
-      <p><em>Jan 2020 - Present</em></p>
-      <p>
-        Led a team of designers to deliver high-quality designs for clients in the tech and retail industries. Collaborated with developers to ensure seamless implementation.
-      </p>
-
-      <h3>Freelance Designer</h3>
-      <p><em>Jun 2018 - Dec 2019</em></p>
-      <p>
-        Worked with startups and small businesses to create logos, websites, and marketing materials. Delivered projects on time and within budget.
-      </p>
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="assets/images/project1.jpg" alt="Project 1">
+          <h3>Project Title 1</h3>
+          <p>Short description of the project. Technologies used: [list technologies].</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+        <div class="project">
+          <img src="assets/images/project2.jpg" alt="Project 2">
+          <h3>Project Title 2</h3>
+          <p>Short description of the project. Technologies used: [list technologies].</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+        <div class="project">
+          <img src="assets/images/project3.jpg" alt="Project 3">
+          <h3>Project Title 3</h3>
+          <p>Short description of the project. Technologies used: [list technologies].</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Education Page -->
-    <div class="page">
-      <h2>Education</h2>
-      <h3>Bachelor of Fine Arts (BFA)</h3>
-      <p><em>University of Creative Arts, 2014 - 2018</em></p>
-      <p>
-        Specialized in Graphic Design and Digital Media. Graduated with honors.
-      </p>
-    </div>
-
-    <!-- Contact Page -->
-    <div class="page">
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
       <h2>Contact Me</h2>
-      <p>Let's connect and collaborate!</p>
-      <ul>
-        <li>Email: john.doe@example.com</li>
-        <li>Phone: +123 456 7890</li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></li>
-        <li>Portfolio: <a href="https://johndoe.com" target="_blank">johndoe.com</a></li>
-      </ul>
+      <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div class="social-links">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourprofile" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
