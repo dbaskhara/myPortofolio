@@ -165,3 +165,34 @@ footer .social-links a {
 footer .social-links a:hover {
   color: #007BFF;
 }
+
+/* Education Section */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.education-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.education-item i {
+  font-size: 2em;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.education-item h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.education-item p {
+  margin: 5px 0;
+  color: #666;
+}
