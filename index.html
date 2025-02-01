@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV - Text Assembly Effect</title>
+    <title>My CV - Smooth Text Assembly Effect</title>
     <style>
         /* Basic Reset */
         * {
@@ -50,8 +50,8 @@
 
         .paragraph-container span {
             display: inline-block;
-            opacity: 0;
-            transform: translateY(-20px);
+            transform: translateY(20px); /* Start below the final position */
+            opacity: 0; /* Start invisible */
             animation: assemble 0.5s ease-in-out forwards;
         }
 
@@ -76,11 +76,11 @@
         @keyframes assemble {
             from {
                 opacity: 0;
-                transform: translateY(-20px);
+                transform: translateY(20px); /* Start below */
             }
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateY(0); /* Move to final position */
             }
         }
     </style>
