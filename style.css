@@ -196,3 +196,55 @@ footer .social-links a:hover {
   margin: 5px 0;
   color: #666;
 }
+
+/* Welcome Pop-up */
+.welcome-popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.welcome-popup.active {
+  display: flex; /* Show when active */
+}
+
+.welcome-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-content h2 {
+  margin: 0 0 10px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.welcome-content p {
+  margin: 0 0 20px;
+  color: #666;
+}
+
+.welcome-content button {
+  padding: 10px 20px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.welcome-content button:hover {
+  background: #0056b3;
+}
