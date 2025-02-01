@@ -4,35 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flipbook Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.css">
-  <style>
-    #flipbook {
-      width: 800px;
-      height: 600px;
-      margin: 0 auto;
-    }
-    .page {
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 20px;
-    }
-  </style>
 </head>
 <body>
   <div id="flipbook">
-    <div class="page">Page 1: Cover</div>
-    <div class="page">Page 2: About Me</div>
-    <div class="page">Page 3: Project 1</div>
-    <div class="page">Page 4: Project 2</div>
+    <!-- Cover Page -->
+    <div class="page cover">
+      <h1>My Portfolio</h1>
+      <p>Welcome to my work!</p>
+    </div>
+
+    <!-- About Me Page -->
+    <div class="page">
+      <h2>About Me</h2>
+      <p>Hi, I'm a creative professional showcasing my work here.</p>
+    </div>
+
+    <!-- Project 1 Page -->
+    <div class="page">
+      <h2>Project 1</h2>
+      <p>Description of Project 1.</p>
+      <img src="project1.jpg" alt="Project 1">
+    </div>
+
+    <!-- Project 2 Page -->
+    <div class="page">
+      <h2>Project 2</h2>
+      <p>Description of Project 2.</p>
+      <img src="project2.jpg" alt="Project 2">
+    </div>
+
+    <!-- Contact Page -->
+    <div class="page">
+      <h2>Contact Me</h2>
+      <p>Email: example@example.com</p>
+      <p>Phone: +123 456 7890</p>
+    </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.js"></script>
-  <script>
-    $("#flipbook").turn({
-      width: 800,
-      height: 600,
-      autoCenter: true
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
