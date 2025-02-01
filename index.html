@@ -1,124 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV - Smooth Text Assembly Effect</title>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            background-color: #1e1e1e;
-            color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .container {
-            max-width: 800px;
-            padding: 20px;
-            background: rgba(46, 46, 46, 0.8); /* Semi-transparent background */
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        h1 {
-            color: #0073e6;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .paragraph-container {
-            font-size: 1.1em;
-            line-height: 1.6;
-            text-align: left;
-            opacity: 0; /* Start hidden */
-            animation: fadeIn 2s ease-in-out 3s forwards; /* Fade in after text assembly */
-        }
-
-        .paragraph-container span {
-            display: inline-block;
-            transform: translateY(20px); /* Start below the final position */
-            opacity: 0; /* Start invisible */
-            animation: assemble 0.5s ease-in-out forwards;
-        }
-
-        a {
-            color: #00bcd4;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #0073e6;
-            text-decoration: underline;
-        }
-
-        /* Fade-In Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        /* Assemble Animation */
-        @keyframes assemble {
-            from {
-                opacity: 0;
-                transform: translateY(20px); /* Start below */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0); /* Move to final position */
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipbook Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.css">
+  <style>
+    #flipbook {
+      width: 800px;
+      height: 600px;
+      margin: 0 auto;
+    }
+    .page {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Main Content -->
-    <div class="container">
-        <h1>Hello, I'm [Your Name]</h1>
-        <div class="paragraph-container" id="paragraph-container"></div>
+  <div id="flipbook">
+    <div class="page">Page 1: Cover</div>
+    <div class="page">Page 2: About Me</div>
+    <div class="page">Page 3: Project 1</div>
+    <div class="page">Page 4: Project 2</div>
+  </div>
 
-        <!-- LinkedIn Button -->
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" class="linkedin-btn">
-                Connect with me on LinkedIn
-            </a>
-        </div>
-    </div>
-
-    <script>
-        // Function to assemble the text
-        function assembleText() {
-            const paragraph = "Welcome to my personal CV website! I am a passionate and driven IT professional with expertise in software development, data analysis, and system design. I thrive on solving complex problems and creating innovative solutions that make a difference.";
-            const paragraphContainer = document.getElementById('paragraph-container');
-
-            paragraph.split('').forEach((char, index) => {
-                const span = document.createElement('span');
-                // Replace spaces with non-breaking spaces
-                span.innerHTML = char === ' ' ? '&nbsp;' : char;
-                span.style.animationDelay = `${index * 0.05}s`; // Stagger the animation
-                paragraphContainer.appendChild(span);
-            });
-
-            // Show the paragraph container
-            paragraphContainer.style.opacity = 1;
-        }
-
-        // Start the text assembly effect
-        assembleText();
-    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.1/turn.min.js"></script>
+  <script>
+    $("#flipbook").turn({
+      width: 800,
+      height: 600,
+      autoCenter: true
+    });
+  </script>
 </body>
 </html>
