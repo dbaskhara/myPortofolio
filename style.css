@@ -143,40 +143,25 @@ header nav ul li a {
   margin: 0 15px 15px;
 }
 
-/* Contact Section */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-form input, form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button {
-  align-self: flex-start;
-}
-
-.social-links {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.social-links a {
-  margin: 0 10px;
-  font-size: 1.5em;
-  color: #007BFF;
-}
-
 /* Footer */
 footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
+}
+
+footer .social-links {
+  margin-bottom: 20px;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  font-size: 1.5em;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: #007BFF;
 }
