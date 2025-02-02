@@ -3,10 +3,19 @@ window.onload = function () {
   const welcomePopup = document.getElementById('welcome-popup');
   welcomePopup.style.display = 'flex'; // Show the pop-up
 
-  // Close the pop-up when the button is clicked
+  // Hide all sections and footer initially
+  const sections = document.querySelectorAll('section, footer');
+  sections.forEach(section => {
+    section.style.display = 'none';
+  });
+
+  // Close the pop-up and show all sections and footer when the button is clicked
   const closeButton = document.getElementById('close-welcome');
   closeButton.addEventListener('click', function () {
     welcomePopup.style.display = 'none'; // Hide the pop-up
+    sections.forEach(section => {
+      section.style.display = 'block'; // Show all sections and footer
+    });
   });
 };
 
