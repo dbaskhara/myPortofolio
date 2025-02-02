@@ -86,6 +86,7 @@ header nav ul li a {
   display: flex;
   align-items: center;
   gap: 20px;
+  text-align: justify;
 }
 
 .profile-img {
