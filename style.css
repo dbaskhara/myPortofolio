@@ -205,54 +205,75 @@ footer .social-links a:hover {
   color: #666;
 }
 
-/* Welcome Pop-up */
+/* Basic styling */
 .welcome-popup {
-  display: none; /* Hidden by default */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.welcome-popup.active {
-  display: flex; /* Show when active */
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+color: white;
+padding: 2rem;
+border-radius: 15px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+text-align: center;
+animation: fadeIn 0.5s ease-in-out;
+z-index: 1000;
 }
 
 .welcome-content {
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  text-align: center;
-  max-width: 400px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+max-width: 300px;
+margin: 0 auto;
 }
 
-.welcome-content h2 {
-  margin: 0 0 10px;
-  font-size: 1.8em;
-  color: #333;
+.welcome-header h2 {
+font-size: 1.8rem;
+margin-bottom: 0.5rem;
 }
 
-.welcome-content p {
-  margin: 0 0 20px;
-  color: #666;
+.welcome-header p {
+font-size: 1rem;
+opacity: 0.9;
 }
 
-.welcome-content button {
-  padding: 10px 20px;
-  background: #007BFF;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.welcome-body {
+margin: 1.5rem 0;
 }
 
-.welcome-content button:hover {
-  background: #0056b3;
+.welcome-body p {
+font-size: 1.1rem;
+margin-bottom: 1rem;
+}
+
+#close-welcome {
+background: #ff6f61;
+color: white;
+border: none;
+padding: 0.8rem 1.5rem;
+border-radius: 25px;
+font-size: 1rem;
+cursor: pointer;
+transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#close-welcome:hover {
+background: #ff4a3d;
+transform: scale(1.05);
+}
+
+.welcome-footer small {
+font-size: 0.8rem;
+opacity: 0.7;
+}
+
+/* Animation */
+@keyframes fadeIn {
+from {
+  opacity: 0;
+  transform: translate(-50%, -60%);
+}
+to {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
 }
