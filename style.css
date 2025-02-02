@@ -140,6 +140,11 @@ header nav ul li a {
   margin: 15px;
 }
 
+.project i {
+  font-size: 2em;
+  color: #007BFF;
+}
+
 .project p {
   margin: 0 15px 15px;
 }
