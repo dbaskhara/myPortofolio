@@ -207,18 +207,19 @@ footer .social-links a:hover {
 
 /* Basic styling */
 .welcome-popup {
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-background: linear-gradient(135deg, #1e3c72, #2a5298);
-color: white;
-padding: 2rem;
-border-radius: 15px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-text-align: center;
-animation: fadeIn 0.5s ease-in-out;
-z-index: 1000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background */
+  color: white; /* Default text color */
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  z-index: 1000;
+  display: none; /* Hidden by default */
 }
 
 .welcome-content {
@@ -227,13 +228,16 @@ margin: 0 auto;
 }
 
 .welcome-header h2 {
-font-size: 1.8rem;
-margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff; /* Ensure white color for the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for better readability */
 }
 
 .welcome-header p {
-font-size: 1rem;
-opacity: 0.9;
+  font-size: 1rem;
+  opacity: 0.9;
+  color: #f0f0f0; /* Light gray for better contrast */
 }
 
 .welcome-body {
@@ -241,8 +245,9 @@ margin: 1.5rem 0;
 }
 
 .welcome-body p {
-font-size: 1.1rem;
-margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #f0f0f0; /* Light gray for better contrast */
 }
 
 #close-welcome {
@@ -262,8 +267,9 @@ transform: scale(1.05);
 }
 
 .welcome-footer small {
-font-size: 0.8rem;
-opacity: 0.7;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  color: #f0f0f0; /* Light gray for better contrast */
 }
 
 /* Animation */
