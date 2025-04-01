@@ -112,19 +112,41 @@ header {
   font-size: 2em;
 }
 
-/* About Section */
+/* Modern About Section Styles */
+.modern-about {
+  background: #fff;
+  padding: 80px 0;
+}
+
 .about-content {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
-  text-align: justify;
+  gap: 40px;
+}
+
+.about-image {
+  flex: 0 0 200px;
+  text-align: center;
 }
 
 .profile-img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.about-text p {
+  margin-bottom: 20px;
 }
 
 /* Skills Section */
