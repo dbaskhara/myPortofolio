@@ -149,60 +149,113 @@ header {
   margin-bottom: 20px;
 }
 
-/* Skills Section */
+/* Modern Skills Section */
+.modern-skills {
+  background: #fff;
+  padding: 80px 0;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.skill {
+.skill-card {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 30px 20px;
   text-align: center;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill i {
-  font-size: 2em;
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.skill-icon {
+  font-size: 3rem;
   color: #007BFF;
+  margin-bottom: 20px;
 }
 
-/* Projects Section */
+/* Modern Projects Section */
+.modern-projects {
+  background: #f9f9f9;
+  padding: 80px 0;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.project {
+.project-card {
   background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 30px 20px;
   text-align: center;
-  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
-.project h3 {
-  margin: 15px;
-}
-
-.project i {
-  font-size: 2em;
+.project-icon {
+  font-size: 3rem;
   color: #007BFF;
+  margin-bottom: 20px;
 }
 
-.project p {
-  margin: 0 15px 15px;
+/* Modern Education Section */
+.modern-education {
+  background: #fff;
+  padding: 80px 0;
 }
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.education-card {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.education-icon {
+  font-size: 3rem;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
+
+/* Headings for all modern sections */
+.section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
 
 /* Footer */
 footer {
@@ -227,74 +280,11 @@ footer .social-links a:hover {
   color: #007BFF;
 }
 
-/* Education Section */
-.education-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.education-item {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.education-item i {
-  font-size: 2em;
-  color: #007BFF;
-  margin-bottom: 10px;
-}
-
-.education-item h3 {
-  margin: 10px 0;
-  font-size: 1.5em;
-}
-
-.education-item p {
-  margin: 5px 0;
-  color: #666;
-}
-
-/* Basic styling */
-
-
-
-
 .welcome-header h2 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
   color: #ffffff; /* Ensure white color for the heading */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for better readability */
-}
-
-.welcome-header p {
-  font-size: 1rem;
-  opacity: 0.9;
-  color: #f0f0f0; /* Light gray for better contrast */
-}
-
-
-
-.welcome-body p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #f0f0f0; /* Light gray for better contrast */
-}
-
-
-
-#close-welcome:hover {
-background: #ff4a3d;
-transform: scale(1.05);
-}
-
-.welcome-footer small {
-  font-size: 0.8rem;
-  opacity: 0.7;
-  color: #f0f0f0; /* Light gray for better contrast */
 }
 
 /* Animations */
