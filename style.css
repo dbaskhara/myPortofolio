@@ -280,11 +280,24 @@ footer .social-links a:hover {
   color: #007BFF;
 }
 
-.welcome-header h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  color: #ffffff; /* Ensure white color for the heading */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for better readability */
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+/* Example of dark mode header adjustments */
+body.dark-mode header {
+  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+}
+
+body.dark-mode footer {
+  background: #1f1f1f;
+  color: #e0e0e0;
 }
 
 /* Animations */
