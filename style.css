@@ -280,25 +280,40 @@ footer .social-links a:hover {
   color: #007BFF;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+/* Dark Mode Toggle Button Styles */
+.dark-mode-toggle {
+  background-color: #007BFF;
+  border: none;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-body.dark-mode a {
+.dark-mode-toggle:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Dark Mode Styles for Card Elements */
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .education-card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Optionally adjust links inside cards if needed */
+body.dark-mode .skill-card a,
+body.dark-mode .project-card a,
+body.dark-mode .education-card a {
   color: #bb86fc;
 }
 
-/* Example of dark mode header adjustments */
-body.dark-mode header {
-  background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
-}
-
-body.dark-mode footer {
-  background: #1f1f1f;
-  color: #e0e0e0;
-}
 
 /* Animations */
 @keyframes fadeInDown {
