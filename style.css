@@ -36,156 +36,86 @@ a {
   background-color: #0056b3;
 }
 
-/* Updated Header CSS */
+/* Updated Header Section */
 header {
   position: relative;
-  background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+  background: linear-gradient(135deg, 
+    #4F46E5 0%, 
+    #7C3AED 25%, 
+    #EC4899 50%, 
+    #F59E0B 75%, 
+    #10B981 100%);
+  background-size: 400% 400%;
   color: white;
-  padding: 4rem 0 8rem 0;
-  overflow: hidden;
+  padding: 6rem 0 10rem 0;
   min-height: 100vh;
   display: flex;
   align-items: center;
-}
-
-.header-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 50% 50%, 
-    rgba(255,255,255,0.1) 0%,
-    rgba(0,0,0,0.5) 100%);
-  z-index: 0;
+  animation: gradientFlow 15s ease infinite;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  overflow: hidden;
 }
 
 .header-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
 }
 
-.header-title {
-  font-size: 4rem;
+header h1 {
+  font-size: 4.5rem;
   margin: 0;
-  background: linear-gradient(45deg, #fff, #a2d2ff);
+  background: linear-gradient(45deg, #fff, #FDE68A);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: textShine 3s ease-in-out infinite alternate;
-  font-weight: 700;
+  text-shadow: 0 0 30px rgba(255,255,255,0.3);
+  font-weight: 800;
   letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
-.animated-tagline {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+header .tagline {
+  font-size: 1.8rem;
+  font-weight: 300;
   margin: 1.5rem 0;
-  flex-wrap: wrap;
-}
-
-.tagline-word {
-  font-size: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   position: relative;
-  padding: 0.5rem 1rem;
-  background: rgba(255,255,255,0.1);
-  border-radius: 50px;
-  backdrop-filter: blur(10px);
-  animation: float 3s ease-in-out infinite;
-  cursor: default;
-  transition: all 0.3s ease;
-}
-
-.tagline-word:hover {
-  transform: translateY(-3px);
-  background: rgba(255,255,255,0.2);
-}
-
-.glass-nav {
-  margin-top: 3rem;
-  padding: 1.5rem;
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.1);
   display: inline-block;
 }
 
-.glass-nav ul {
-  gap: 2rem;
-}
-
-.hover-underline {
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.hover-underline::after {
+header .tagline::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #a2d2ff;
-  transition: width 0.3s ease;
-}
-
-.hover-underline:hover::after {
-  width: 100%;
-}
-
-.scroll-indicator {
-  position: absolute;
-  bottom: 2rem;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  animation: bounce 2s infinite;
-}
-
-.mouse {
-  width: 25px;
-  height: 40px;
-  border: 2px solid #fff;
-  border-radius: 20px;
-  position: relative;
-}
-
-.mouse::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 8px;
-  background: #fff;
+  width: 60px;
+  height: 3px;
+  background: rgba(255,255,255,0.5);
   border-radius: 2px;
-  animation: scroll 2s infinite;
 }
 
-@keyframes textShine {
+header nav ul li a {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+header nav ul li a:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes gradientFlow {
   0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
-  40% { transform: translateY(-20px) translateX(-50%); }
-  60% { transform: translateY(-10px) translateX(-50%); }
-}
-
-@keyframes scroll {
-  0% { opacity: 1; height: 8px; }
-  100% { opacity: 0; height: 15px; transform: translateY(15px); }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Sections */
