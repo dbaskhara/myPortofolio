@@ -56,10 +56,42 @@ header {
   overflow: hidden;
 }
 
+.header-title {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
 .header-content {
   position: relative;
   z-index: 2;
   text-align: center;
+}
+
+.glass-nav {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.08);
+}
+
+.glass-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.glass-nav li {
+  display: inline-block;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 header h1 {
